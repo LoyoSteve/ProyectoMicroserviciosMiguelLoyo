@@ -1,0 +1,95 @@
+info:
+  component: Edge Server
+
+
+server:
+  port: 8766
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+spring.sleuth.sampler.percentage: 1.0
+
+logging:
+  file: logs/${spring.application.name}.log
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+    com.atsistemas: 'DEBUG'
+    
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registerWithEureka: false # solo le habla a eureka pero no se registra
+      
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 50000
+
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+
+  routes:
+    api-usuarios:
+        path: /usuarios/v1/**
+        serviceId: api-usuarios
+        stripPrefix: false
+        sensitiveHeaders: 
+
+    api-publicaciones:
+        path: /publicaciones/v1/**
+        serviceId: api-publicaciones
+        stripPrefix: false
+        sensitiveHeaders:
+   
+    api-amigos:
+        path: /amigos/v1/**
+        serviceId: api-amigos
+        stripPrefix: false
+        sensitiveHeaders:
+   
+   
+    api-comentarios:
+        path: /comentarios/v1/**
+        serviceId: api-comentarios
+        stripPrefix: false
+        sensitiveHeaders:
+    
+    api-likes:
+        path: /likes/v1/**
+        serviceId: api-likes
+        stripPrefix: false
+        sensitiveHeaders:
+        
+
+    notification-service:
+        path: /notification/**
+        serviceId: notification-service
+        stripPrefix: false
+        sensitiveHeaders:
+
+    ui-platform:
+        path: /**
+        serviceId: ui-platform
+        stripPrefix: false
+        sensitiveHeaders:
