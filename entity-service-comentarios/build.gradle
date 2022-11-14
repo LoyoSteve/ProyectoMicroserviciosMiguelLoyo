@@ -51,6 +51,7 @@ dependencies {
   compile('org.springframework.cloud:spring-cloud-starter-eureka')
   runtime 'org.jolokia:jolokia-core' 
   compile 'io.dropwizard.metrics:metrics-core'
+  compile('org.springframework.boot:spring-boot-starter-amqp')
 }
 
 dependencyManagement {
