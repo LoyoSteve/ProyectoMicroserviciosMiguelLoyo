@@ -1,0 +1,412 @@
+{
+	"info": {
+		"_postman_id": "46914f6d-b87f-46bb-8804-05a20bff4692",
+		"name": "proyectMs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "usuarios",
+			"item": [
+				{
+					"name": "obtener usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/usuarios/v1/66e169d8-3b7c-4ab7-a9d3-a16cecad3e8b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"usuarios",
+								"v1",
+								"66e169d8-3b7c-4ab7-a9d3-a16cecad3e8b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear usuarios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Miguel\",\n    \"edad\": 23,\n    \"email\": \"miguel@gmail.com\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/usuarios/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"usuarios",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/usuarios/v1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"usuarios",
+								"v1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Miguel Angel2\",\n    \"edad\": 23,\n    \"email\": \"miguel@gmail.com\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/usuarios/v1/66e169d8-3b7c-4ab7-a9d3-a16cecad3e8b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"usuarios",
+								"v1",
+								"66e169d8-3b7c-4ab7-a9d3-a16cecad3e8b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "publicaciones",
+			"item": [
+				{
+					"name": "crear publicacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"descripcion\": \"Esta es una publicacion\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/publicaciones/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"publicaciones",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener publicacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/publicaciones/v1/4b2f7c9b-a2f5-43f1-8f0a-4f1d9f608ab3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"publicaciones",
+								"v1",
+								"4b2f7c9b-a2f5-43f1-8f0a-4f1d9f608ab3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener publicaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/publicaciones/v1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"publicaciones",
+								"v1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modificar publicacion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"descripcion\": \"Esta es una publicacion editada\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/publicaciones/v1/4b2f7c9b-a2f5-43f1-8f0a-4f1d9f608ab3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"publicaciones",
+								"v1",
+								"4b2f7c9b-a2f5-43f1-8f0a-4f1d9f608ab3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comentarios",
+			"item": [
+				{
+					"name": "crear comentario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comentario\": \"Este es un comentario\",\n    \"idUsuario\": \"xxx\",\n    \"idPublicacion\": \"xxx\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/comentarios/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"comentarios",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener comentario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/comentarios/v1/380fda6c-fd88-46b9-a8d1-31346a055031",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"comentarios",
+								"v1",
+								"380fda6c-fd88-46b9-a8d1-31346a055031"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener comentario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/comentarios/v1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"comentarios",
+								"v1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put comentario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comentario\": \"Este es un comentario editado\",\n    \"idUsuario\": \"xxx\",\n    \"idPublicacion\": \"xxx\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/comentarios/v1/380fda6c-fd88-46b9-a8d1-31346a055031",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"comentarios",
+								"v1",
+								"380fda6c-fd88-46b9-a8d1-31346a055031"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "amigos",
+			"item": [
+				{
+					"name": "crear amigos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idUsuario\": \"xxx\",\n    \"relation\": \"Amigos\",\n    \"idAmigo\": \"xxx\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/amigos/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"amigos",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener amigos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/amigos/v1/713d7bd2-04e4-4c30-8795-75344237b7aa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"amigos",
+								"v1",
+								"713d7bd2-04e4-4c30-8795-75344237b7aa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put amigos",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idUsuario\": \"xxx\",\n    \"relation\": \"Amigos\",\n    \"idAmigo\": \"xxx\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/amigos/v1/713d7bd2-04e4-4c30-8795-75344237b7aa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"amigos",
+								"v1",
+								"713d7bd2-04e4-4c30-8795-75344237b7aa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
