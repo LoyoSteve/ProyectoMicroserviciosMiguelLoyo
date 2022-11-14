@@ -13,25 +13,21 @@ cd arquitectura-gateway
 ./generaImagen.sh
 cd ../
 
-#cd ms-administracion
-#./generaImagen.sh
-#cd ../
-
-#cd entity-service-seguros-guadalupe
-#./generaImagen.sh
-#cd ../
-
-#cd entity-service-empleados
-#./generaImagen.sh
-#cd ../
-
 cd entity-service-usuarios
 ./generaImagen.sh
 cd ../
 
-#cd task-service-creditos
-#./generaImagen.sh
-#cd ../
+cd entity-service-publicaciones
+./generaImagen.sh
+cd ../
+
+cd entity-service-comentarios
+./generaImagen.sh
+cd ../
+
+cd entity-service-amigos
+./generaImagen.sh
+cd ../
 
 docker-compose up --build
 
