@@ -39,11 +39,10 @@ public class PublicacionesServiceImpl implements PublicacionesService{
 		Publicacion publicacion = publicacionesRepository.findById(id)
 				.orElseThrow(() -> PublicacionNoEncontradoException.from("No se encontro publicacion", id));
 
-		publicacion = publicacion.from(publicacionDto);
+		publicacion.setId(id);
+		publicacion.setDescripcion(publicacionDto.getDescripcion());
 
-		publicacion = publicacionesRepository.save(publicacion);
-
-		return publicacion;
+		return publicacionesRepository.save(publicacion);
 	}
 
 	@Override

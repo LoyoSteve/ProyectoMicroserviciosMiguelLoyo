@@ -84,3 +84,17 @@ services:
     depends_on:
       - postgres
       - rabbitmq
+  api-estados:
+    image: loyosteve/entity-service-estados-patterns:0.0.1-snapshot
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/red_social_estados
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=admin
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SPRING_BOOT_ADMIN_URL=http://monitor:8090
+    ports:
+      - "8088:8088"
+    depends_on:
+      - postgres
+      - rabbitmq

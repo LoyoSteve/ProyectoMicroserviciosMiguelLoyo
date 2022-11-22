@@ -29,6 +29,10 @@ cd entity-service-amigos
 ./generaImagen.sh
 cd ../
 
+cd entity-service-estados
+./generaImagen.sh
+cd ../
+
 docker-compose up --build
 
 docker-compose stop

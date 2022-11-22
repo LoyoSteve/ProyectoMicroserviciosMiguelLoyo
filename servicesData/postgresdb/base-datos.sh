@@ -16,4 +16,7 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
 
     CREATE DATABASE red_social_comentarios OWNER admin;
     GRANT ALL PRIVILEGES ON DATABASE red_social_comentarios TO admin;
+
+    CREATE DATABASE red_social_estados OWNER admin;
+    GRANT ALL PRIVILEGES ON DATABASE red_social_estados TO admin;
 EOSQL
