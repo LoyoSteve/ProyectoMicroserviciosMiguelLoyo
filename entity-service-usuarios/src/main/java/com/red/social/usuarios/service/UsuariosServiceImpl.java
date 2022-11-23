@@ -34,11 +34,12 @@ public class UsuariosServiceImpl implements UsuariosService{
 		Usuario usuarios = usuariosRepository.findById(id)
 				.orElseThrow(() -> UsuarioNoEncontradoException.from("No se encontro el usuario", id));
 
-		usuarios = usuarios.from(usuariosDto);
+		usuarios.setId(id);
+		usuarios.setEdad(usuariosDto.getEdad());
+		usuarios.setEmail(usuariosDto.getEmail());
+		usuarios.setNombre(usuariosDto.getNombre());
 
-		usuarios = usuariosRepository.save(usuarios);
-
-		return usuarios;
+		return usuariosRepository.save(usuarios);
 	}
 
 	@Override

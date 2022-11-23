@@ -39,11 +39,12 @@ public class ComentariosServiceImpl implements ComentariosService{
 		Comentario comentario = comentariosRepository.findById(id)
 				.orElseThrow(() -> ComentarioNoEncontradoException.from("No se encontro el comentario", id));
 
-		comentario = comentario.from(comentarioDto);
+		comentario.setId(id);
+		comentario.setComentario(comentarioDto.getComentario());
+		comentario.setIdPublicacion(comentarioDto.getIdPublicacion());
+		comentario.setIdUsuario(comentarioDto.getIdUsuario());
 
-		comentario = comentariosRepository.save(comentario);
-
-		return comentario;
+		return comentariosRepository.save(comentario);
 	}
 
 	@Override

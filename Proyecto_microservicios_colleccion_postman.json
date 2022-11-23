@@ -14,7 +14,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8084/usuarios/v1/66e169d8-3b7c-4ab7-a9d3-a16cecad3e8b",
+							"raw": "http://localhost:8084/usuarios/v1/bc7bb291-a26b-4063-a3d7-63542757d943",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -23,7 +23,7 @@
 							"path": [
 								"usuarios",
 								"v1",
-								"66e169d8-3b7c-4ab7-a9d3-a16cecad3e8b"
+								"bc7bb291-a26b-4063-a3d7-63542757d943"
 							]
 						}
 					},
@@ -36,7 +36,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"Miguel\",\n    \"edad\": 23,\n    \"email\": \"miguel@gmail.com\",\n    \"password\": \"1234\"\n}",
+							"raw": "{\n    \"nombre\": \"Maria\",\n    \"edad\": 21,\n    \"email\": \"maria@gmail.com\",\n    \"password\": \"1234\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -86,7 +86,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"Miguel Angel2\",\n    \"edad\": 23,\n    \"email\": \"miguel@gmail.com\",\n    \"password\": \"1234\"\n}",
+							"raw": "{\n    \"nombre\": \"Maria editada\",\n    \"edad\": 23,\n    \"email\": \"maria@gmail.com\",\n    \"password\": \"1234\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -94,7 +94,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8084/usuarios/v1/66e169d8-3b7c-4ab7-a9d3-a16cecad3e8b",
+							"raw": "http://localhost:8084/usuarios/v1/1f4dea77-a5f3-40ba-983a-56dd21a369c7",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -103,7 +103,7 @@
 							"path": [
 								"usuarios",
 								"v1",
-								"66e169d8-3b7c-4ab7-a9d3-a16cecad3e8b"
+								"1f4dea77-a5f3-40ba-983a-56dd21a369c7"
 							]
 						}
 					},
@@ -149,7 +149,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8086/publicaciones/v1/4b2f7c9b-a2f5-43f1-8f0a-4f1d9f608ab3",
+							"raw": "http://localhost:8086/publicaciones/v1/fdf850e1-49c7-465d-bdf7-fbad7fabb67b",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -158,7 +158,7 @@
 							"path": [
 								"publicaciones",
 								"v1",
-								"4b2f7c9b-a2f5-43f1-8f0a-4f1d9f608ab3"
+								"fdf850e1-49c7-465d-bdf7-fbad7fabb67b"
 							]
 						}
 					},
@@ -200,7 +200,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8086/publicaciones/v1/4b2f7c9b-a2f5-43f1-8f0a-4f1d9f608ab3",
+							"raw": "http://localhost:8086/publicaciones/v1/fdf850e1-49c7-465d-bdf7-fbad7fabb67b",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -209,7 +209,7 @@
 							"path": [
 								"publicaciones",
 								"v1",
-								"4b2f7c9b-a2f5-43f1-8f0a-4f1d9f608ab3"
+								"fdf850e1-49c7-465d-bdf7-fbad7fabb67b"
 							]
 						}
 					},
@@ -361,7 +361,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8085/amigos/v1/713d7bd2-04e4-4c30-8795-75344237b7aa",
+							"raw": "http://localhost:8085/amigos/v1/a382eb66-f5e4-4054-b945-d6857161d561",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -370,7 +370,7 @@
 							"path": [
 								"amigos",
 								"v1",
-								"713d7bd2-04e4-4c30-8795-75344237b7aa"
+								"a382eb66-f5e4-4054-b945-d6857161d561"
 							]
 						}
 					},
@@ -401,6 +401,111 @@
 								"amigos",
 								"v1",
 								"713d7bd2-04e4-4c30-8795-75344237b7aa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "estados",
+			"item": [
+				{
+					"name": "crear estaados",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"descripcion\": \"descripcion estados\",\n    \"fecha\": \"12-10-2022\",\n    \"foto\": \"foto.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/estados/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"estados",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener estados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8088/estados/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"estados",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener un estado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8088/estados/v1/f95fde43-a008-4f65-9710-4d5fed0c1dfa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"estados",
+								"v1",
+								"f95fde43-a008-4f65-9710-4d5fed0c1dfa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put estados",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"descripcion\": \"descripcion estados editado\",\n    \"fecha\": \"12-10-2022\",\n    \"foto\": \"foto.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/estados/v1/f95fde43-a008-4f65-9710-4d5fed0c1dfa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"estados",
+								"v1",
+								"f95fde43-a008-4f65-9710-4d5fed0c1dfa"
 							]
 						}
 					},

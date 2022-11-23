@@ -34,11 +34,12 @@ public class AmigosServiceImpl implements AmigoService{
 		Amigo amigo = amigosRepository.findById(id)
 				.orElseThrow(() -> AmigoNoEncontradoException.from("No se encontro amigo", id));
 
-		amigo = amigo.from(amigosDto);
+		amigo.setId(id);
+		amigo.setIdAmigo(amigosDto.getIdAmigo());
+		amigo.setIdUsuario(amigosDto.getIdUsuario());
+		amigo.setRelation(amigosDto.getRelation());
 
-		amigo = amigosRepository.save(amigo);
-
-		return amigo;
+		return amigosRepository.save(amigo);
 	}
 
 	@Override

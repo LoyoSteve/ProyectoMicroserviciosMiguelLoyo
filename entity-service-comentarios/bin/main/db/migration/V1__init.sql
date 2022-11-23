@@ -4,5 +4,4 @@ CREATE TABLE comentarios (
   idUsuario VARCHAR(255) NOT NULL,
   idPublicacion VARCHAR(255) NOT NULL
 );
-
 	

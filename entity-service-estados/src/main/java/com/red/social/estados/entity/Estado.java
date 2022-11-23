@@ -39,11 +39,11 @@ public class Estado implements Serializable {
 	@NotBlank
 	private String foto;
 	
-	public static Estado from(EstadoDto publicacionDto) {
+	public static Estado from(EstadoDto estadoDto) {
 		Estado estado = new Estado();
-		estado.setDescripcion(publicacionDto.getDescripcion());
-		estado.setFecha(publicacionDto.getFecha());
-		estado.setFoto(publicacionDto.getFoto());
+		estado.setDescripcion(estadoDto.getDescripcion());
+		estado.setFecha(estadoDto.getFecha());
+		estado.setFoto(estadoDto.getFoto());
 
 		return estado;
 	}

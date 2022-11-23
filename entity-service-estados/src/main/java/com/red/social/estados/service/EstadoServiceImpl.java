@@ -26,21 +26,22 @@ public class EstadoServiceImpl implements EstadoService{
 	}
 
 	@Override
-	public Estado guardar(EstadoDto publicacionDto) {
-		Estado publucacion = Estado.from(publicacionDto);
+	public Estado guardar(EstadoDto estadoDto) {
+		Estado publucacion = Estado.from(estadoDto);
 		return estadoRepository.save(publucacion);
 	}
 
 	@Override
-	public Estado modificar(String id, EstadoDto publicacionDto) {
-		Estado publicacion = estadoRepository.findById(id)
+	public Estado modificar(String id, EstadoDto estadoDto) {
+		Estado estado = estadoRepository.findById(id)
 				.orElseThrow(() -> EstadoNoEncontradoException.from("No se encontro estado", id));
 
-		publicacion = publicacion.from(publicacionDto);
+		estado.setId(id);
+		estado.setFoto(estadoDto.getFoto());
+		estado.setFecha(estadoDto.getFecha());
+		estado.setDescripcion(estadoDto.getDescripcion());
 
-		publicacion = estadoRepository.save(publicacion);
-
-		return publicacion;
+		return estadoRepository.save(estado);
 	}
 
 	@Override

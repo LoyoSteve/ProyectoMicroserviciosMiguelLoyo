@@ -9,9 +9,9 @@ public interface EstadoService {
 
 	Estado obtenerById(String id);
 
-	Estado guardar(EstadoDto publicacionDto);
+	Estado guardar(EstadoDto estadoDto);
 
-	Estado modificar(String id, EstadoDto publicacionDto);
+	Estado modificar(String id, EstadoDto estadoDto);
 
 	List<Estado> obtenerTodo();
 	
