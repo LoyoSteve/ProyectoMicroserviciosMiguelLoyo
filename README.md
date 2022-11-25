@@ -1,7 +1,7 @@
 # ProyectoMicroserviciosMiguelLoyo
 Proyecto de microservicios - Miguel Angel Mendez Loyo - Red Social
 
-Video del proyecto: https://youtu.be/aYTZIPHZ8nk
+Video del proyecto: https://youtu.be/Kk8yw0qE70M
 
 docker hub: loyosteve
 
